@@ -1,3 +1,4 @@
+import 'package:Fluttern/register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,12 +33,13 @@ class _HomePageState extends State<HomePage> {
         height: height,
         width: width,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/homeback.jpg',
-            ),
-            fit: BoxFit.cover,
-          ),
+          color: Color.fromRGBO(190, 224, 245, 1),
+          // image: DecorationImage(
+          //   image: AssetImage(
+          //     'assets/homeback.jpg',
+          //   ),
+          //   fit: BoxFit.cover,
+          // ),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -140,10 +142,10 @@ class _HomePageState extends State<HomePage> {
                     height: 30,
                   ),
                   Text(
-                    "Already Login?",
+                    "New User?",
                     style: TextStyle(
                       fontSize: 20.0,
-                      color: Colors.black87,
+                      color: Colors.black38,
                       fontWeight: FontWeight.bold,
                       fontFamily: "Lustria",
                     ),
@@ -151,9 +153,19 @@ class _HomePageState extends State<HomePage> {
                   InkWell(
                     child: new Text(
                       "Register Here",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.black),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Register(),
+                        ),
+                      );
+                    },
                   )
                 ],
               ),

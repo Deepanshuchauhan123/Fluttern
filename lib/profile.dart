@@ -15,7 +15,7 @@ class _profileState extends State<profile> {
   double lat, long;
 
   void getLocation() async {
-    Location location = Location();
+    Location location = Locgation();
     await location.getCurrentLocation();
 
     lat = location.getLat();
